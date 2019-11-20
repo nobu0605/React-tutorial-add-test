@@ -14,10 +14,10 @@ describe('calculateWinner', () => {
       8: null
     }
     const newState = calculateWinner(squares)
-    expect(newState).toBe('B')
+    expect(newState).toBe(null)
   })
 
-  test('Winner is O', () => {
+  test('Winner is A', () => {
     const squares = {
       0: 'A',
       1: 'B',
@@ -30,10 +30,10 @@ describe('calculateWinner', () => {
       8: null
     }
     const newState = calculateWinner(squares)
-    expect(newState).toBe(null)
+    expect(newState).toBe('B')
   })
 
-  test('Winner is X', () => {
+  test('Winner is B', () => {
     const squares = {
       0: 'A',
       1: 'B',
@@ -46,6 +46,6 @@ describe('calculateWinner', () => {
       8: null
     }
     const newState = calculateWinner(squares)
-    expect(newState).toBe('B')
+    expect(newState).toBe('A')
   })
 })
